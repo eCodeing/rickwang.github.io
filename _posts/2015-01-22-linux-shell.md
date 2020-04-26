@@ -3,7 +3,7 @@ layout: post
 title: shell
 tags: shell Linux script
 categories: Linux
-published: false
+published: true
 ---
 
 * TOC

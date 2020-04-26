@@ -2,22 +2,23 @@
 <html>
 
 <head>
-    <title>Tag</title>
+    <title>golang map</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="keywords" content="Tag,   奇怪的姿势又增加了~" />
-    <meta name="description" content="Tag,   " />
+    <meta name="keywords" content="golang map, back-end, golang,data-structure, 奇怪的姿势又增加了~" />
+    <meta name="description" content="golang map, back-end, golang,data-structure, " />
     <meta name="theme-color" content="#2CA6CB"/>
     <link rel="shortcut icon" type="image/x-icon" media="screen" href="http://localhost:4000/favicon.ico" />
-    <link rel="canonical" href="http://localhost:4000/tags/" />
+    <link rel="canonical" href="http://localhost:4000/back-end/golang-map/" />
     <link rel="alternate" type="application/rss+xml" title="奇怪的姿势又增加了~" href="http://localhost:4000/feed.xml"  />
 
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdn.bootcss.com/octicons/3.5.0/octicons.min.css" >
     <link rel="stylesheet" type="text/css" href="http://localhost:4000/static/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="http://localhost:4000/static/css/tagCloud.css" />
-    <link rel="stylesheet" type="text/css" href="http://localhost:4000/static/css/tags.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/static/css/highlight.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/static/css/gitment.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/static/css/post.css" />
     
 
 </head>
@@ -57,7 +58,7 @@
                         
                         
                         
-                        <li class="active">
+                        <li>
                             <a href="http://localhost:4000/tags/" class="word-keep"><span class="octicon octicon-tag"></span>&nbsp;&nbsp;Tag</a>
                         </li>
                         
@@ -82,101 +83,91 @@
 <div class="main">
     <div class="container">
         <div class="row">
-    <div class="content">
-        <div class="sheet">
-            <header>
-                <h1>Tag</h1>
-            </header>
-            <hr>
-            <article>
-                <div class="tagCloud">
-    
-    <a href="#make">make</a>
-    
-    <a href="#Linux">Linux</a>
-    
-    <a href="#script">script</a>
-    
-    <a href="#shell">shell</a>
-    
-    <a href="#golang">golang</a>
-    
-    <a href="#data-structure">data-structure</a>
-    
-</div>
+    <div class="content col-lg-9">
+        <div class="sheet post">
+          <header>
+            <h2>golang map</h2>
+            <p class="post-meta">
+                <span class="octicon octicon-clock"></span> Apr 26, 2020
+            </p>
+            <p class="post-tag">
+                <span><a href="http://localhost:4000/category/#back-end"><span class="octicon octicon-list-unordered"></span>&nbsp;back-end</a></span>
+                <span>
+                    <a class="word-keep" href="http://localhost:4000/tags/#golang"><span class="octicon octicon-tag"></span>&nbsp;golang</a>
+                    
+                    <a class="word-keep" href="http://localhost:4000/tags/#data-structure"><span class="octicon octicon-tag"></span>&nbsp;data-structure</a>
+                    
+                </span>
+            </p>
+          </header>
+          <hr class="boundary">
+          <article>
+            <ul id="markdown-toc">
+  <li><a href="#哈希结构" id="markdown-toc-哈希结构">哈希结构</a></li>
+  <li><a href="#golang的map实现" id="markdown-toc-golang的map实现">golang的map实现</a></li>
+</ul>
 
-<div>
-    <ul class="tag-box inline">
-        
-        <li><a href="#make">make<span>1</span></a></li>
-        
-        <li><a href="#Linux">Linux<span>2</span></a></li>
-        
-        <li><a href="#script">script<span>2</span></a></li>
-        
-        <li><a href="#shell">shell<span>1</span></a></li>
-        
-        <li><a href="#golang">golang<span>1</span></a></li>
-        
-        <li><a href="#data-structure">data-structure<span>1</span></a></li>
-        
-    </ul>
-</div>
+<h2 id="哈希结构">哈希结构</h2>
 
-<div>
-    
-    <h2 id="make">make</h2>
-    <ul>
-        
-        <li itemscope><span class="entry-date"><time datetime="2015-01-11T00:00:00+08:00" itemprop="datePublished">11 Jan 2015</time></span> &raquo; <a href="http://localhost:4000/linux/linux-make/">make</a></li>
-        
-    </ul>
-    
-    <h2 id="Linux">Linux</h2>
-    <ul>
-        
-        <li itemscope><span class="entry-date"><time datetime="2015-01-22T00:00:00+08:00" itemprop="datePublished">22 Jan 2015</time></span> &raquo; <a href="http://localhost:4000/linux/linux-shell/">shell</a></li>
-        
-        <li itemscope><span class="entry-date"><time datetime="2015-01-11T00:00:00+08:00" itemprop="datePublished">11 Jan 2015</time></span> &raquo; <a href="http://localhost:4000/linux/linux-make/">make</a></li>
-        
-    </ul>
-    
-    <h2 id="script">script</h2>
-    <ul>
-        
-        <li itemscope><span class="entry-date"><time datetime="2015-01-22T00:00:00+08:00" itemprop="datePublished">22 Jan 2015</time></span> &raquo; <a href="http://localhost:4000/linux/linux-shell/">shell</a></li>
-        
-        <li itemscope><span class="entry-date"><time datetime="2015-01-11T00:00:00+08:00" itemprop="datePublished">11 Jan 2015</time></span> &raquo; <a href="http://localhost:4000/linux/linux-make/">make</a></li>
-        
-    </ul>
-    
-    <h2 id="shell">shell</h2>
-    <ul>
-        
-        <li itemscope><span class="entry-date"><time datetime="2015-01-22T00:00:00+08:00" itemprop="datePublished">22 Jan 2015</time></span> &raquo; <a href="http://localhost:4000/linux/linux-shell/">shell</a></li>
-        
-    </ul>
-    
-    <h2 id="golang">golang</h2>
-    <ul>
-        
-        <li itemscope><span class="entry-date"><time datetime="2020-04-26T00:00:00+08:00" itemprop="datePublished">26 Apr 2020</time></span> &raquo; <a href="http://localhost:4000/back-end/golang-map/">golang map</a></li>
-        
-    </ul>
-    
-    <h2 id="data-structure">data-structure</h2>
-    <ul>
-        
-        <li itemscope><span class="entry-date"><time datetime="2020-04-26T00:00:00+08:00" itemprop="datePublished">26 Apr 2020</time></span> &raquo; <a href="http://localhost:4000/back-end/golang-map/">golang map</a></li>
-        
-    </ul>
-    
-</div>
+<h2 id="golang的map实现">golang的map实现</h2>
 
-
-
-            </article>
+          </article>
+          <hr class="boundary">
+          <div id="post-share" class="bdsharebuttonbox">
+              <a href="#" class="bds_more" data-cmd="more"></a>
+              <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+              <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+              <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+              <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+              <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+          </div>
         </div>
+        <div class="pad-min"></div>
+        <div id="post-comment" class="sheet post hidden">
+            <div id="disqus_thread"></div>
+        </div>
+    </div>
+    <div class="content-navigation col-lg-3">
+      <div class="shadow-bottom-center" >
+        <div class="content-navigation-toc">
+            <div class="content-navigation-header">
+                <span class="octicon octicon-list-unordered"></span>&nbsp;Toc
+            </div>
+            <div class="content-navigation-list toc"></div>
+        </div>
+        <div class="content-navigation-tag">
+            <div class="content-navigation-header">
+                <span class="octicon octicon-list-unordered"></span>&nbsp;Tags
+            </div>
+            <div class="content-navigation-list">
+                <ul>
+                    
+                    <li>
+                        <a href="http://localhost:4000/tags#golang"><span class="octicon octicon-tag"></span>&nbsp;golang</a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://localhost:4000/tags#data-structure"><span class="octicon octicon-tag"></span>&nbsp;data-structure</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="content-navigation-related">
+            <div class="content-navigation-header">
+                <span class="octicon octicon-list-unordered"></span>&nbsp;Related
+            </div>
+            <div class="content-navigation-list">
+                <ul>
+                    
+
+                    
+
+                    
+                </ul>
+            </div>
+        </div>
+      </div>
     </div>
 </div>
     </div>
@@ -201,8 +192,8 @@
     <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://localhost:4000/static/js/script.js"></script>
-    <script type="text/javascript" src="http://localhost:4000/static/js/tagCloud.js"></script>
-    <script type="text/javascript" src="http://localhost:4000/static/js/tags.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/static/js/gitment.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/static/js/post.js"></script>
     
 
 

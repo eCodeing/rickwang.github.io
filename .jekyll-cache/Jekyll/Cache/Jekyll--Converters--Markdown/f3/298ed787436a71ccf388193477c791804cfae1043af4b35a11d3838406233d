@@ -1,0 +1,52 @@
+I"
+<p>在JS中，当内部的方法被其他对象引用，如果内部的方法使用了外部方法的变量，将造成外部方法无法释放，变量将被保持，此时将形成闭包。</p>
+
+<p>看一个例子</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"# "</span> <span class="na">id=</span><span class="s">"closureTest1"</span><span class="nt">&gt;</span>闭包测试1<span class="nt">&lt;/a&gt;&lt;br</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"# "</span> <span class="na">id=</span><span class="s">"closureTest2"</span><span class="nt">&gt;</span>闭包测试2<span class="nt">&lt;/a&gt;&lt;br</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"# "</span> <span class="na">id=</span><span class="s">"closureTest3"</span><span class="nt">&gt;</span>闭包测试3<span class="nt">&lt;/a&gt;&lt;br</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">closureTest</span><span class="p">(){</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+       <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">closureTest</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">i</span><span class="p">);</span>
+       <span class="nx">element</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">alert</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>此时无论点击哪个超链接，弹出的都是<code class="highlighter-rouge">3</code>，这是因为onclick触发时，绑定函数才会去初始化<code class="highlighter-rouge">i</code>的值，而<code class="highlighter-rouge">i</code>引用自外部函数<code class="highlighter-rouge">closureTest</code>，在closureTest中，<code class="highlighter-rouge">i</code>早已递增到3。</p>
+
+<p>解决办法很简单，不闭包就行了。</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">badClosureExample</span><span class="p">(){</span>
+   <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+       <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">closureTest</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">i</span><span class="p">);</span>
+       <span class="nx">element</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span>  <span class="nx">clickCall</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">clickCall</span><span class="p">(</span><span class="nx">j</span><span class="p">){</span>
+    <span class="k">return</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">您单击的是第</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">j</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">个链接</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>闭包也并非全然有害，有时我们也可以利用做些有趣的事，例如定时任务的传参</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">bind</span><span class="p">(){</span>
+    <span class="kd">var</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">closureTest0</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">element</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">p</span><span class="p">){</span>
+            <span class="k">return</span> <span class="kd">function</span><span class="p">(){</span>
+                <span class="nx">alert</span><span class="p">(</span><span class="nx">p</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}(</span><span class="dl">'</span><span class="s1">998</span><span class="dl">'</span><span class="p">),</span> <span class="mi">1000</span><span class="p">);</span> <span class="c1">//延迟1秒弹出提示</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

@@ -4,24 +4,42 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     
+    <url>
+        <loc>http://localhost:4000/back-end/golang-map/</loc>
+        <lastmod>2020-04-26T16:58:38+08:00</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/linux/linux-shell/</loc>
+        <lastmod>2020-04-26T16:58:38+08:00</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/linux/linux-make/</loc>
+        <lastmod>2020-04-26T16:58:38+08:00</lastmod>
+        <changefreq>weekly</changefreq>
+    </url>
+    
     
     <url>
         <loc>http://localhost:4000/archive/</loc>
-        <lastmod>2020-04-26T16:45:04+08:00</lastmod>
+        <lastmod>2020-04-26T16:58:38+08:00</lastmod>
         <changefreq>weekly</changefreq>
     </url>
     
     
     <url>
         <loc>http://localhost:4000/category/</loc>
-        <lastmod>2020-04-26T16:45:04+08:00</lastmod>
+        <lastmod>2020-04-26T16:58:38+08:00</lastmod>
         <changefreq>weekly</changefreq>
     </url>
     
     
     <url>
         <loc>http://localhost:4000/tags/</loc>
-        <lastmod>2020-04-26T16:45:04+08:00</lastmod>
+        <lastmod>2020-04-26T16:58:38+08:00</lastmod>
         <changefreq>weekly</changefreq>
     </url>
     
