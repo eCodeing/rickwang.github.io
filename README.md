@@ -2,7 +2,7 @@
 
 # Blog Address
 
-<https://bit-ranger.github.io/blog/>
+<https://ecodeing.github.io/rickwang.github.io/>
 
 
 # Must Modify
