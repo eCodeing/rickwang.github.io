@@ -18,7 +18,7 @@
   &lt;li&gt;&lt;a href=&quot;#测试&quot; id=&quot;markdown-toc-测试&quot;&gt;测试&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;这是&lt;a href=&quot;https://bit-ranger.github.io/blog/algorithm/large-file-diff/&quot;&gt;上一篇&lt;/a&gt;的续作，对于这个算法，其中可以同时进行的部分有&lt;/p&gt;
+&lt;p&gt;这是&lt;a href=&quot;https://ecodeing.github.io/rickwang.github.io/blog/algorithm/large-file-diff/&quot;&gt;上一篇&lt;/a&gt;的续作，对于这个算法，其中可以同时进行的部分有&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;拆分后对每一个块的排序可以同时进行&lt;/li&gt;
   &lt;li&gt;合并时的不同范围之间可以同时进行，例如拆分为10个小块，那么1-5小块的合并跟6-10小块的合并过程可以同时进行&lt;/li&gt;

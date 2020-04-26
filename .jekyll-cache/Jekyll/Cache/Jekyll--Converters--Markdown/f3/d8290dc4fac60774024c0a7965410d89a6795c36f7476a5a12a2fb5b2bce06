@@ -131,7 +131,7 @@ urlEncode只能识别ASCII码，可以想象的是，那些urlEncode不能识别
 </code></pre></div></div>
 
 <p>get与post结果如下,Servlet将http头部解析完成后，将请求体留了下来供应用程序使用, 这是考虑到http请求可能有多种 <a href="http://www.w3school.com.cn/tags/att_form_enctype.asp">enctype</a> , 请求体的结构可能不同,
-例如，<code class="highlighter-rouge">multipart/form-data</code>就不是这样的key=value结构，关于multipart/form-data，我在这篇 <a href="https://bit-ranger.github.io/blog/web/2014-03-15/file-upload">fileupload</a> 中曾有过简要分析。</p>
+例如，<code class="highlighter-rouge">multipart/form-data</code>就不是这样的key=value结构，关于multipart/form-data，我在这篇 <a href="https://ecodeing.github.io/rickwang.github.io/blog/web/2014-03-15/file-upload">fileupload</a> 中曾有过简要分析。</p>
 
 <p><img src="/servlet-encode/body-utf.png" alt="body-utf" /></p>
 
