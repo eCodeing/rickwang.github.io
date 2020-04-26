@@ -27,11 +27,11 @@ function share(){
 function gitment() {
     var gitment = new Gitment({
         id: window.location.pathname,
-        owner: '',
-        repo: '',
+        owner: 'eCodeing',
+        repo: 'blog',
         oauth: {
-            client_id: '',
-            client_secret: '',
+            client_id: 'a6fb73b3e790e234bab8',
+            client_secret: 'cc10aaff53a03d05ab2ee002dbf401dd7627c7a3',
         },
     });
     gitment.render('post-comment')
